@@ -24,4 +24,9 @@ class Role extends Model
         'deleted_at',
     ];
 
+    public function User()
+    {
+        return $this->hasMany('App\Models\User', 'role_id');
+    }
+
 }

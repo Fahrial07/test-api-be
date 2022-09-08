@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('role_id');
+            $table->foreignId('role_id')->index('fk_users_to_roles')->nullable();
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
-            $table->string('role');
-            $table->string('token');
+            $table->string('role')->nullable();
+            $table->string('api_token')->nullable();
             $table->string('is_active');
             $table->string('slug');
             $table->string('last_login');

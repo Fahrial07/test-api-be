@@ -17,10 +17,19 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    public $table = 'users';
+
     protected $fillable = [
+        'role_id',
         'name',
         'email',
         'password',
+        'role',
+        'token',
+        'is_active',
+        'slug',
+        'last_login',
+        'created_by',
     ];
 
     /**
@@ -41,4 +50,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function Roles(){
+        return $this->belongsTo('App\Models\Role', 'role_id', 'id');
+    }
 }

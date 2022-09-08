@@ -2,7 +2,13 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RoleController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RolesController;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DataUsersController;
+use App\Http\Controllers\SingkatanController;
+use App\Http\Controllers\JenisMataPelajaranController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +21,16 @@ use App\Http\Controllers\RoleController;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
 
-Route::post('roles', [RoleController::class, 'store']);
+Route::middleware('auth:sanctum')->group(function(){
+    Route::resource('roles', RolesController::class);
+    Route::resource('users', UsersController::class);
+    Route::resource('data-users', DataUsersController::class);
+    Route::resource('singkatan', SingkatanController::class);
+    Route::resource('jenis-mapel', JenisMataPelajaranController::class);
+});
+
+Route::resource('register', RegisterController::class);
+Route::resource('login', LoginController::class);
+
+
