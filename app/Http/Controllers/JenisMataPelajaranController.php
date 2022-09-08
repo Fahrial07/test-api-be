@@ -128,6 +128,7 @@ class JenisMataPelajaranController extends Controller
     public function update(Request $request, $id)
     {
         try {
+
             $name =     $request->name;
             $deskripsi = $request->deskripsi;
             $status =   $request->status;
