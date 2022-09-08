@@ -1,0 +1,743 @@
+{
+	"info": {
+		"_postman_id": "0c934a26-1ab7-4c86-8404-8e591c420e51",
+		"name": "BE TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16904284"
+	},
+	"item": [
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "smk",
+									"type": "text"
+								},
+								{
+									"key": "deskripsi",
+									"value": "lorem ipsum",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "test-api-be.test/api/roles",
+							"host": [
+								"test-api-be",
+								"test"
+							],
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "test-api-be.test/api/roles",
+							"host": [
+								"test-api-be",
+								"test"
+							],
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|IdixExaHZaivs0mflMCVjpkbab1ZcxxK78fBDKbG",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "method",
+								"value": "PUT",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "smk",
+									"type": "text"
+								},
+								{
+									"key": "deskripsi",
+									"value": "Lorem ipsum",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "in_active",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "test-api-be.test/api/roles/1",
+							"host": [
+								"test-api-be",
+								"test"
+							],
+							"path": [
+								"api",
+								"roles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleted",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "test-api-be.test/api/roles/1",
+							"host": [
+								"test-api-be",
+								"test"
+							],
+							"path": [
+								"api",
+								"roles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "alifahrialanwar@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "test-api-be.test/api/login",
+							"host": [
+								"test-api-be",
+								"test"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Data Users",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "test-api-be.test/api/data-users",
+							"host": [
+								"test-api-be",
+								"test"
+							],
+							"path": [
+								"api",
+								"data-users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Singkatan",
+			"item": [
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|zgWaFw7iXEMJGGautFnigRwr4iI9VLfD2IChYtvM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "test-api-be.test/api/data-users",
+							"host": [
+								"test-api-be",
+								"test"
+							],
+							"path": [
+								"api",
+								"data-users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Up",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|zgWaFw7iXEMJGGautFnigRwr4iI9VLfD2IChYtvM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id_role",
+									"value": "sma",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "sma pati",
+									"type": "text"
+								},
+								{
+									"key": "singkatan",
+									"value": "smkp",
+									"type": "text"
+								},
+								{
+									"key": "deskripsi",
+									"value": "oke",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "test-api-be.test/api/singkatan",
+							"host": [
+								"test-api-be",
+								"test"
+							],
+							"path": [
+								"api",
+								"singkatan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jenis Mapel",
+			"item": [
+				{
+					"name": "GEt",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "test-api-be.test/api/jenis-mapel",
+							"host": [
+								"test-api-be",
+								"test"
+							],
+							"path": [
+								"api",
+								"jenis-mapel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|JtAj8PAePkgqWBEUISeUKfMfOFL3SRSojeEWE1R6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "mulok",
+									"type": "text"
+								},
+								{
+									"key": "deskripsi",
+									"value": "muatan lokal",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "test-api-be.test/api/jenis-mapel",
+							"host": [
+								"test-api-be",
+								"test"
+							],
+							"path": [
+								"api",
+								"jenis-mapel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "mulok",
+									"type": "text"
+								},
+								{
+									"key": "deskripsi",
+									"value": "muatan lokal",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "test-api-be.test/api/jenis-mapel",
+							"host": [
+								"test-api-be",
+								"test"
+							],
+							"path": [
+								"api",
+								"jenis-mapel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mapel",
+			"item": [
+				{
+					"name": "GEt",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "test-api-be.test/api/mapel",
+							"host": [
+								"test-api-be",
+								"test"
+							],
+							"path": [
+								"api",
+								"mapel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kelas",
+			"item": [
+				{
+					"name": "GEt",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|JtAj8PAePkgqWBEUISeUKfMfOFL3SRSojeEWE1R6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "test-api-be.test/api/data-users",
+							"host": [
+								"test-api-be",
+								"test"
+							],
+							"path": [
+								"api",
+								"data-users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|JtAj8PAePkgqWBEUISeUKfMfOFL3SRSojeEWE1R6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "kelas",
+									"value": "2C",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "test-api-be.test/api/kelas/1",
+							"host": [
+								"test-api-be",
+								"test"
+							],
+							"path": [
+								"api",
+								"kelas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Del",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pertemuan",
+			"item": [
+				{
+					"name": "GEt",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "test-api-be.test/api/pertemuan",
+							"host": [
+								"test-api-be",
+								"test"
+							],
+							"path": [
+								"api",
+								"pertemuan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|JtAj8PAePkgqWBEUISeUKfMfOFL3SRSojeEWE1R6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "test-api-be.test/api/data-users",
+							"host": [
+								"test-api-be",
+								"test"
+							],
+							"path": [
+								"api",
+								"data-users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|JtAj8PAePkgqWBEUISeUKfMfOFL3SRSojeEWE1R6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "kelas",
+									"value": "2C",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "test-api-be.test/api/kelas/1",
+							"host": [
+								"test-api-be",
+								"test"
+							],
+							"path": [
+								"api",
+								"kelas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Del",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|JtAj8PAePkgqWBEUISeUKfMfOFL3SRSojeEWE1R6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "test-api-be.test/api/pertemuan/1",
+							"host": [
+								"test-api-be",
+								"test"
+							],
+							"path": [
+								"api",
+								"pertemuan",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
